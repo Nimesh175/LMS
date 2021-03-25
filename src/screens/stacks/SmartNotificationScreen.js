@@ -34,9 +34,9 @@ const ToggleButton = () => {
 }
 
 // list 
-const ListItem =({title=""}) => {
+const ListItem =({ id ,title=""}) => {
      return (
-          <> 
+          <View id={id}> 
           <View style={{width : '100%' , paddingVertical : dimensions.paddingLevel1, backgroundColor : colors.white , flexDirection : 'row' , borderRadius : 8, paddingHorizontal : dimensions.paddingLevel1 }}>  
               
                <View style={{width : "80%" , justifyContent : 'center'}}>
@@ -49,7 +49,7 @@ const ListItem =({title=""}) => {
                </View>
           </View>
           <EmptyView style={{ marginTop: dimensions.heightLevel1 * 0.2 }} />
-          </>
+          </View>
      )
 }
 
@@ -65,9 +65,9 @@ const SmartNotificationScreen = () => {
 
                <EmptyView style={{ marginTop: dimensions.heightLevel2 }} />
                <View style={styles.container}>
-                <ListItem  title={" Enable Notification reminder for lessons 1"} />
-                <ListItem  title={" Enable Notification reminder for lessons 2"}  />
-                <ListItem  title={" Enable Notification reminder for lessons 3"} />
+                <ListItem id={0}  title={" Enable Notification reminder for lessons 1"} />
+                <ListItem id={1}  title={" Enable Notification reminder for lessons 2"}  />
+                <ListItem id={2}  title={" Enable Notification reminder for lessons 3"} />
 
                 </View>
 

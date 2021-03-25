@@ -16,10 +16,10 @@ const rightArrow = require("../../assets/images/rightArrow.webp")
 
 // last card / summary
 
-const SummaryCard =({mainText="" , subText=""}) => {
+const SummaryCard =({ id ,mainText="" , subText=""}) => {
      return(
           <>
-                <View style={{width : dimensions.heightLevel6, height : dimensions.heightLevel6, backgroundColor : colors.white , borderRadius : 5 , justifyContent : 'center', alignItems : 'center' , marginRight : dimensions.paddingLevel1}}>
+                <View id={id} style={{width : dimensions.heightLevel6, height : dimensions.heightLevel6, backgroundColor : colors.white , borderRadius : 5 , justifyContent : 'center', alignItems : 'center' , marginRight : dimensions.paddingLevel1}}>
                     <Text style={{fontFamily : fontFamilies.PoppinsRegular , fontSize : fontSizes.fontXLarge, color: colors.primary}}>{mainText}</Text>
                     <Text  style={{fontFamily : fontFamilies.PoppinsRegular , fontSize : fontSizes.fontSmall, color: "rgba(0,0,0,0.5)" , textAlign:"center"}}>{subText}</Text>
                </View>
@@ -178,12 +178,12 @@ const TermsButton =({name="" ,styleButton={} , styleButtonText={} }) => {
                          <EmptyView style={{ marginTop: dimensions.heightLevel1 }} />
                           <View style={{width : "100%" , paddingHorizontal :dimensions.paddingLevel2, paddingVertical : dimensions.paddingLevel1 * 0.5 , flexDirection :'row' , alignItems : 'center'}}>
                               <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-                                     <SummaryCard mainText="12%" subText="Average" />
-                                     <SummaryCard mainText="1" subText="place" />
-                                     <SummaryCard mainText="230" subText="Overall Score" />
-                                     <SummaryCard mainText="12" subText="Subjects" />
-                                     <SummaryCard mainText="12" subText="Subjects" />
-                                     <SummaryCard mainText="12" subText="Subjects" />
+                                     <SummaryCard id={0} mainText="12%" subText="Average" />
+                                     <SummaryCard id={1} mainText="1" subText="place" />
+                                     <SummaryCard id={2} mainText="230" subText="Overall Score" />
+                                     <SummaryCard id={3} mainText="12" subText="Subjects" />
+                                     <SummaryCard id={4} mainText="12" subText="Subjects" />
+                                     <SummaryCard id={5} mainText="12" subText="Subjects" />
                               </ScrollView>
                           </View>    
 

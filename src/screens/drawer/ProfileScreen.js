@@ -10,9 +10,9 @@ import HamIconWithBar from '../../components/HamIconWithBar';
 const e11 = require("../../assets/images/BG1.png")
 
 
-const ListItem = ({title="" , detail=""}) => {
+const ListItem = ({ id ,title="" , detail=""}) => {
      return (
-          <View style={styles.listContainer}>
+          <View id={id} style={styles.listContainer}>
                     <View style={{width : "45%", paddingHorizontal : dimensions.paddingLevel1 * 0.5 }}>
                          <Text style={{fontFamily : fontFamilies.PoppinsRegular , fontSize : fontSizes.fontMidMedium , color : 'rgba(0,0,0,0.5)', justifyContent : 'center'}}>
                          {title}</Text>
@@ -66,10 +66,10 @@ const ListItem = ({title="" , detail=""}) => {
                     <View style={styles.lowerContainer}>
                         <ScrollView>
                          <ListItem title="Name" detail="John peter forsia" />
-                              <ListItem title="Username" detail="John@1233" />
-                              <ListItem title="Contact Number" detail="+890 8978 9900" />
-                              <ListItem title="School" detail="OKI International School" />
-                              <ListItem title="Garde" detail="12" />
+                              <ListItem id={0} title="Username" detail="John@1233" />
+                              <ListItem id={1} title="Contact Number" detail="+890 8978 9900" />
+                              <ListItem id={2} title="School" detail="OKI International School" />
+                              <ListItem id={3} title="Garde" detail="12" />
                         </ScrollView>
                     </View>
 

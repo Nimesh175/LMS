@@ -23,6 +23,7 @@ import SupportScreen from './screens/stacks/SupportScreen';
 import SmartNotificationScreen from './screens/stacks/SmartNotificationScreen';
 import ProfileScreen from './screens/drawer/ProfileScreen';
 import SettingScreen from './screens/drawer/SettingScreen';
+import LessonSubScreen from './screens/tabs/LessonSubScreen';
 
 
 const App= () => {
@@ -34,7 +35,7 @@ const App= () => {
             <SafeAreaView style={[basicStyles.miniFlexWrapper , {backgroundColor : '#F6F6F6'} ]}> 
               
 
-                {/* <LoginScreen /> */}
+                <LoginScreen />
                 {/* <SignUpScreen /> */}
                 {/* <ResetPasswordScreen /> */}
                 {/* <ForgotPasswordScreen /> */}
@@ -42,12 +43,14 @@ const App= () => {
                 {/* <ViewMarksScreen /> */}
                 {/* <LessonScreen /> */}
 
-                <PrivacyScreen />
+                {/* <PrivacyScreen /> */}
                 {/* <SupportScreen /> */}
                 {/* <SmartNotificationScreen /> */}
 
                 {/* <ProfileScreen /> */}
                 {/* <SettingScreen /> */}
+
+                {/* <LessonSubScreen /> */}
                 
       
 

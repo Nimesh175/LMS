@@ -15,9 +15,9 @@ const belltIcon = <Icon name="bell" size={16} color={colors.primary} />;
 const privacyIcon = <Icon2 name="user-shield" size={15} color={colors.primary} />;
 const supportIcon = <Icon2 name="user-cog" size={15} color={colors.primary} />;
 
-const ListItem = ({icon , title=""}) => {
+const ListItem = ({id ,icon , title=""}) => {
      return (
-          <>
+          <View id={id}>
                <TouchableOpacity style={styles.listContainer}>
                     <View style={{width : "20%" ,justifyContent : 'center' , alignItems : 'center'}}>
                          <View style={styles.listIconContainer}>
@@ -32,7 +32,7 @@ const ListItem = ({icon , title=""}) => {
                     </View>
                </TouchableOpacity>
                <EmptyView style={{ marginTop: dimensions.heightLevel1 * 0.3 }} />
-          </>
+          </View>
      )
 }
 
@@ -77,9 +77,9 @@ const ListItem = ({icon , title=""}) => {
                      {/* >>> list container */}
                     <EmptyView style={{ marginTop: dimensions.heightLevel2 * 0.8 }} />
                     <View style={styles._listItemsContainer}>
-                         <ListItem  icon={belltIcon} title={"Smart Notification"} />
-                         <ListItem  icon={privacyIcon} title={"Privacy & Seurity"} />
-                         <ListItem  icon={supportIcon} title={"Support"} />
+                         <ListItem id={id}  icon={belltIcon} title={"Smart Notification"} />
+                         <ListItem id={id}  icon={privacyIcon} title={"Privacy & Seurity"} />
+                         <ListItem id={id}  icon={supportIcon} title={"Support"} />
                     </View>
 
                </View>

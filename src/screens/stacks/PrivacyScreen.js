@@ -10,9 +10,9 @@ import TopNavigationBar from '../../components/TopNavigationBar';
 import { ScrollView } from 'react-native';
 
 
-const TitleAndPharagraph = ({title="" ,description=""}) => {
+const TitleAndPharagraph = ({ id ,title="" ,description=""}) => {
      return (
-          <>
+          <View id={id}>
                  <Text style={{fontFamily : fontFamilies.PoppinsMedium, fontSize : fontSizes.fontLarge}}>{'\u2022'} Title 01</Text>
                <Text style={{fontFamily : fontFamilies.PoppinsLight , fontSize : fontSizes.fontMedium , color : 'rgba(0,0,0,0.7)'}}>
                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -23,7 +23,7 @@ const TitleAndPharagraph = ({title="" ,description=""}) => {
                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s .
                </Text>
                <EmptyView style={{ marginTop: dimensions.heightLevel2 }} />
-          </>
+          </View>
      )
 }
 
@@ -41,9 +41,9 @@ const PrivacyScreen = () => {
                   <ScrollView style={{paddingRight : dimensions.paddingLevel2}} >
                   <EmptyView style={{ marginTop: dimensions.heightLevel1 }} />
                       {/* add pharagraph & title here */}
-                       <TitleAndPharagraph title={""} description={""} />
-                       <TitleAndPharagraph title={""} description={""} />
-                       <TitleAndPharagraph title={""} description={""} />
+                       <TitleAndPharagraph id={0} title={""} description={""} />
+                       <TitleAndPharagraph id={1} title={""} description={""} />
+                       <TitleAndPharagraph id={2} title={""} description={""} />
 
                        <EmptyView style={{ marginTop: dimensions.heightLevel1 }} />
                   </ScrollView>
