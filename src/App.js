@@ -21,6 +21,8 @@ import LessonScreen from './screens/tabs/LessonScreen';
 import PrivacyScreen from './screens/stacks/PrivacyScreen';
 import SupportScreen from './screens/stacks/SupportScreen';
 import SmartNotificationScreen from './screens/stacks/SmartNotificationScreen';
+import ProfileScreen from './screens/drawer/ProfileScreen';
+import SettingScreen from './screens/drawer/SettingScreen';
 
 
 const App= () => {
@@ -36,13 +38,16 @@ const App= () => {
                 {/* <SignUpScreen /> */}
                 {/* <ResetPasswordScreen /> */}
                 {/* <ForgotPasswordScreen /> */}
-                <HomeScreen />
+                {/* <HomeScreen /> */}
                 {/* <ViewMarksScreen /> */}
                 {/* <LessonScreen /> */}
 
-                {/* <PrivacyScreen /> */}
+                <PrivacyScreen />
                 {/* <SupportScreen /> */}
                 {/* <SmartNotificationScreen /> */}
+
+                {/* <ProfileScreen /> */}
+                {/* <SettingScreen /> */}
                 
       
 

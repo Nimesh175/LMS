@@ -4,7 +4,7 @@ import { imageSizes,colors, dimensions, fontFamilies, fontSizes} from '../config
 import EmptyView from './EmptyView'
 
 const hamIcon = require("../assets/images/hamIcon.webp")
-const HamIconWithBar = ({DP = require("../assets/images/men-1.png")}) => {
+const HamIconWithBar = ({DP = require("../assets/images/men-1.png") , isUseDrawer=false , name="Jorge" , drawerHeadTitle="" }) => {
     
      return (
           <>
@@ -16,7 +16,10 @@ const HamIconWithBar = ({DP = require("../assets/images/men-1.png")}) => {
 
                     {/* user name */}
                     <View  style={styles.usernameContainer}>
-                          <Text style={styles.usernameText}>Hello, Jorge</Text>
+                         {
+                              isUseDrawer ?  <Text style={styles.usernameText}>{drawerHeadTitle}</Text> :
+                              <Text style={styles.usernameText}>Hello, {name}</Text>
+                         }
                     </View>
                     
                     {/* Display Picture */}
