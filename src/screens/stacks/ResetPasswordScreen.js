@@ -1,13 +1,13 @@
 import React , {useEffect , useState} from 'react';
 import { View ,Text , StyleSheet, TouchableOpacity , KeyboardAvoidingView} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { LayoutBackground } from '../components/LayoutBackground';
-import { colors, dimensions, fontFamilies, fontSizes } from '../configurations/constants';
-import EmptyView from '../components/EmptyView'
-import TextField from '../components/TextField';
-import ListButton from '../components/ListButton';
+import { LayoutBackground } from '../../components/LayoutBackground';
+import { colors, dimensions, fontFamilies, fontSizes } from '../../configurations/constants';
+import EmptyView from '../../components/EmptyView'
+import TextField from '../../components/TextField';
+import ListButton from '../../components/ListButton';
 
-export const SignUpScreen = () => {
+export const ResetPasswordScreen = () => {
      return (
           <>
         
@@ -16,38 +16,36 @@ export const SignUpScreen = () => {
                {/* main Container  */}
                <KeyboardAvoidingView  style={{justifyContent : 'center' , alignItems : 'center'  , position : 'absolute' , width : dimensions.fullWidth , height : dimensions.fullHeight }}>
                     <View style={styles.container}>
-                         <Text style={styles.loginText}>Register</Text>
+                         <Text style={styles.loginText}>Reset Password</Text>
                          <EmptyView style={{marginTop : dimensions.heightLevel1}}/>
                          <Text style={styles.login_subText}>Perfect for buttons, logos and nav/tab bars. Easy to extend, style and integrate into your project.</Text>
                         
                          <EmptyView style={{ marginTop: dimensions.heightLevel4 }} />
                          
                          <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                              {/* input student name */}
-                              <TextField
-                                   placeholder="student name "
-                                   width={dimensions.widthLevel5}
-                              />
-                              <EmptyView style={{ marginTop: dimensions.heightLevel2 }} />
                               {/* input student number */}
-                               <TextField
-                                   placeholder="student number "
-                                   width={dimensions.widthLevel5}
-                              />
-                              <EmptyView style={{ marginTop: dimensions.heightLevel2 }} />
-                              {/* input password */}
                               <TextField
                                    showEye
                                    isPassword
                                    placeholder="password "
                                    width={dimensions.widthLevel5}
                               />
+                              <EmptyView style={{ marginTop: dimensions.heightLevel2 }} />
+                              {/* input student password */}
+                              <TextField
+                                   showEye
+                                   isPassword
+                                   placeholder="confirm password "
+                                   width={dimensions.widthLevel5}
+                              />
                               <EmptyView style={{ marginTop: dimensions.heightLevel1 }} />
 
-                               <EmptyView style={{ marginTop: dimensions.heightLevel3 }} />
-                             {/* button */}
+                              <Text style={styles.forgotText}>Forgot Password?</Text>
+
+                              <EmptyView style={{ marginTop: dimensions.heightLevel3 }} />
+                              {/* button */}
                               <ListButton
-                                   name="Register"
+                                   name="Save"
                                    customButton={styles.button}
                                    customButtonText={styles.buttonText} />
                          </View>
@@ -56,16 +54,7 @@ export const SignUpScreen = () => {
                     </View>
 
                     <EmptyView style={{ marginTop: dimensions.heightLevel5}} />
-                    <View style={styles.footerContainer}>
-                         <Text style={styles.dontHaveAccText}>Already have an Account? </Text>
-                         {/* signUp button */}
-                         <TouchableOpacity
-                              style={{ paddingHorizontal: 5, paddingVertical: 5 }}
-                         >
-                              <Text style={styles.registerText}> Login</Text>
-                         </TouchableOpacity>
-                         <EmptyView style={{ marginTop: dimensions.heightLevel1 }} />
-                    </View>
+                   
                </KeyboardAvoidingView>
 
                

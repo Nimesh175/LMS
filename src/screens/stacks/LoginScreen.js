@@ -1,11 +1,11 @@
 import React , {useEffect , useState} from 'react';
 import { View ,Text , StyleSheet, TouchableOpacity , KeyboardAvoidingView} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { LayoutBackground } from '../components/LayoutBackground';
-import { colors, dimensions, fontFamilies, fontSizes } from '../configurations/constants';
-import EmptyView from '../components/EmptyView'
-import TextField from '../components/TextField';
-import ListButton from '../components/ListButton';
+import { LayoutBackground } from '../../components/LayoutBackground';
+import { colors, dimensions, fontFamilies, fontSizes } from '../../configurations/constants';
+import EmptyView from '../../components/EmptyView'
+import TextField from '../../components/TextField';
+import ListButton from '../../components/ListButton';
 
 export const LoginScreen = () => {
      return (

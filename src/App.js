@@ -11,13 +11,16 @@ import {
 } from 'react-native';
 
 import { colors, basicStyles } from './configurations/constants';
-import { LoginScreen } from './screens/LoginScreen';
-import { SignUpScreen } from './screens/SignUpScreen';
-import { ResetPasswordScreen } from './screens/ResetPasswordScreen';
-import { ForgotPasswordScreen } from './screens/ForgotPasswordScreen';
+import { LoginScreen } from './screens/stacks/LoginScreen';
+import { SignUpScreen } from './screens/stacks/SignUpScreen';
+import { ResetPasswordScreen } from './screens/stacks/ResetPasswordScreen';
+import { ForgotPasswordScreen } from './screens/stacks/ForgotPasswordScreen';
 import  HomeScreen  from './screens/tabs/HomeScreen';
 import ViewMarksScreen from './screens/tabs/ViewMarksScreen';
 import LessonScreen from './screens/tabs/LessonScreen';
+import PrivacyScreen from './screens/stacks/PrivacyScreen';
+import SupportScreen from './screens/stacks/SupportScreen';
+import SmartNotificationScreen from './screens/stacks/SmartNotificationScreen';
 
 
 const App= () => {
@@ -33,9 +36,13 @@ const App= () => {
                 {/* <SignUpScreen /> */}
                 {/* <ResetPasswordScreen /> */}
                 {/* <ForgotPasswordScreen /> */}
-                {/* <HomeScreen /> */}
+                <HomeScreen />
                 {/* <ViewMarksScreen /> */}
-                <LessonScreen />
+                {/* <LessonScreen /> */}
+
+                {/* <PrivacyScreen /> */}
+                {/* <SupportScreen /> */}
+                {/* <SmartNotificationScreen /> */}
                 
       
 

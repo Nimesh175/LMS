@@ -4,11 +4,10 @@ import { imageSizes,colors, dimensions, fontFamilies, fontSizes} from '../config
 import EmptyView from './EmptyView'
 
 const hamIcon = require("../assets/images/hamIcon.webp")
-const HamIconWithBar = () => {
-     const DP = require("../assets/images/men-1.png")
+const HamIconWithBar = ({DP = require("../assets/images/men-1.png")}) => {
+    
      return (
           <>
-               <EmptyView style={{ marginTop: dimensions.heightLevel1 }} />
                <View style={styles.container}>
                     {/* ham icon */}
                     <TouchableOpacity  style={styles.hamImgContainer}  >
@@ -33,7 +32,7 @@ const HamIconWithBar = () => {
 }
 
 const styles = StyleSheet.create({
-     container: { backgroundColor: colors.white, width: dimensions.fullWidth, flexDirection: 'row' ,paddingVertical : dimensions.paddingLevel1 , paddingHorizontal : dimensions.paddingLevel1 ,},
+     container: { backgroundColor: colors.white, width: dimensions.fullWidth, flexDirection: 'row' ,paddingVertical : dimensions.paddingLevel1 *1.3 , paddingHorizontal : dimensions.paddingLevel1 ,},
      hamImgContainer: { width: "15%", left: 0, alignItems : 'center', justifyContent: 'center', padding : 5  },
      hamImg: {...imageSizes.smallPlusIcon  },
      
@@ -41,7 +40,7 @@ const styles = StyleSheet.create({
      usernameContainer : { justifyContent: 'center', alignItems :'center' , width : "62%"} ,
      usernameText : {fontFamily : fontFamilies.PoppinsRegular , fontSize : fontSizes.fontMediumPlus},
      DPContainer: { justifyContent: 'center', alignItems: 'center', width: "20%" },
-     DPImg : { borderRadius : 10 , height : imageSizes.smallPlusIcon.height * 2.1 , width : imageSizes.smallPlusIcon.width * 2.2 },
+     DPImg : { borderRadius : 10 , height : imageSizes.smallPlusIcon.height * 1.9 , width : imageSizes.smallPlusIcon.width * 2 },
 });
 
 

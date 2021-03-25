@@ -1,12 +1,12 @@
 import React , {useEffect , useState ,useRef} from 'react';
 import { View ,Text , StyleSheet, TouchableOpacity , KeyboardAvoidingView ,TextInput} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { LayoutBackground } from '../components/LayoutBackground';
-import { colors, dimensions, fontFamilies, fontSizes } from '../configurations/constants';
-import EmptyView from '../components/EmptyView'
-import TextField from '../components/TextField';
-import ListButton from '../components/ListButton';
-import { KEYBOARD_TYPES } from '../configurations/appData';
+import { LayoutBackground } from '../../components/LayoutBackground';
+import { colors, dimensions, fontFamilies, fontSizes } from '../../configurations/constants';
+import EmptyView from '../../components/EmptyView'
+import TextField from '../../components/TextField';
+import ListButton from '../../components/ListButton';
+import { KEYBOARD_TYPES } from '../../configurations/appData';
 import {
   CodeField,
   Cursor,
