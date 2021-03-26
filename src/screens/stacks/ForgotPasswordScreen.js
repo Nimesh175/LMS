@@ -7,6 +7,7 @@ import EmptyView from '../../components/EmptyView'
 import TextField from '../../components/TextField';
 import ListButton from '../../components/ListButton';
 import { KEYBOARD_TYPES } from '../../configurations/appData';
+import {Actions} from 'react-native-router-flux';
 import {
   CodeField,
   Cursor,
@@ -16,7 +17,7 @@ import {
 const CELL_COUNT = 5;
 
 
-export const ForgotPasswordScreen = () => {
+ const ForgotPasswordScreen = () => {
 
 
           // OTP
@@ -106,6 +107,7 @@ export const ForgotPasswordScreen = () => {
                               <EmptyView style={{ marginTop: dimensions.heightLevel2 }} />
                               {/* button */}
                               <ListButton
+                              onPress={()=> Actions.loginScreen()}
                                    name="Verify"
                                    customButton={styles.button}
                                    customButtonText={styles.buttonText} />
@@ -190,3 +192,7 @@ const styles = StyleSheet.create({
       verifycationText : {fontFamily : fontFamilies.PoppinsRegular , fontSize : fontSizes.fontLarge , color : 'rgba(255,255,255,0.8)' , textAlign :'left' , width : '100%'}
 
 });
+
+
+
+export default ForgotPasswordScreen

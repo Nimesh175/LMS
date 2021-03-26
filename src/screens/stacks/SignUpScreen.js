@@ -6,8 +6,9 @@ import { colors, dimensions, fontFamilies, fontSizes } from '../../configuration
 import EmptyView from '../../components/EmptyView'
 import TextField from '../../components/TextField';
 import ListButton from '../../components/ListButton';
+import { Actions } from 'react-native-router-flux';
 
-export const SignUpScreen = () => {
+const SignUpScreen = () => {
      return (
           <>
         
@@ -60,6 +61,7 @@ export const SignUpScreen = () => {
                          <Text style={styles.dontHaveAccText}>Already have an Account? </Text>
                          {/* signUp button */}
                          <TouchableOpacity
+                              onPress={()=> Actions.loginScreen()}
                               style={{ paddingHorizontal: 5, paddingVertical: 5 }}
                          >
                               <Text style={styles.registerText}> Login</Text>
@@ -104,3 +106,6 @@ const styles = StyleSheet.create({
      footerContainer : {flexDirection : 'row', bottom : dimensions.heightLevel2 , width: dimensions.fullWidth , justifyContent : 'center' , alignItems : 'center' },
 
 });
+
+
+export default SignUpScreen

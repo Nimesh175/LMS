@@ -4,6 +4,7 @@ import { colors, dimensions, fontFamilies, fontSizes } from '../../configuration
 import EmptyView from '../../components/EmptyView'
 import Icon from 'react-native-vector-icons/FontAwesome';
 import HamIconWithBar from '../../components/HamIconWithBar';
+import {Actions} from 'react-native-router-flux';
 
 const e11 = require("../../assets/images/e11.webp")
 const e12 = require("../../assets/images/e12.webp")
@@ -157,9 +158,11 @@ const OldClassCard = ({id=0  }) => {
                                <Image source={upload1} style={{width : 25 , height : 25}} />
                          </View>
 
-                        <View style={{justifyContent : 'center' , paddingLeft : dimensions.paddingLevel1}}>
+                        <TouchableOpacity
+                              onPress={ () => Actions.manageMaterialScreen() }
+                              style={{justifyContent : 'center' , paddingLeft : dimensions.paddingLevel1}}>
                          <Text style={{fontFamily : fontFamilies.PoppinsRegular , fontSize : fontSizes.fontMidMedium}}>Manage materials</Text>
-                        </View>
+                        </TouchableOpacity>
 
                          <View style={{alignSelf : 'center' , position : 'absolute' , right : 25}}>
                          <Image source={rightArrow} style={{width : 25 , height : 25}} />

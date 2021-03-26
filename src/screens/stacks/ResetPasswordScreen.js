@@ -7,7 +7,7 @@ import EmptyView from '../../components/EmptyView'
 import TextField from '../../components/TextField';
 import ListButton from '../../components/ListButton';
 
-export const ResetPasswordScreen = () => {
+const ResetPasswordScreen = () => {
      return (
           <>
         
@@ -93,3 +93,6 @@ const styles = StyleSheet.create({
      footerContainer : {flexDirection : 'row', bottom : dimensions.heightLevel2 , width: dimensions.fullWidth , justifyContent : 'center' , alignItems : 'center' },
 
 });
+
+
+export default ResetPasswordScreen

@@ -1,13 +1,23 @@
 import React , {useEffect , useState} from 'react';
 import { View ,Text , StyleSheet, TouchableOpacity , KeyboardAvoidingView} from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import { LayoutBackground } from '../../components/LayoutBackground';
 import { colors, dimensions, fontFamilies, fontSizes } from '../../configurations/constants';
 import EmptyView from '../../components/EmptyView'
 import TextField from '../../components/TextField';
 import ListButton from '../../components/ListButton';
+import {Actions} from 'react-native-router-flux';
+import SplashScreen from 'react-native-splash-screen';
 
-export const LoginScreen = () => {
+
+
+ const LoginScreen = () => {
+     useEffect(() => {
+          SplashScreen.hide();
+        }, [])
+       
+
+
+
      return (
           <>
         
@@ -38,11 +48,16 @@ export const LoginScreen = () => {
                               />
                               <EmptyView style={{ marginTop: dimensions.heightLevel1 }} />
 
-                              <Text style={styles.forgotText}>Forgot Password?</Text>
+                             <TouchableOpacity 
+                                   onPress={()=> Actions.forgotPasswordScreen() }
+                                   style={{width : '100%'}}>
+                                        <Text style={styles.forgotText}>Forgot Password?</Text>
+                             </TouchableOpacity>
 
                               <EmptyView style={{ marginTop: dimensions.heightLevel3 }} />
                               {/* button */}
                               <ListButton
+                                    onPress={()=> Actions.homeScreen()}
                                    name="Login"
                                    customButton={styles.button}
                                    customButtonText={styles.buttonText} />
@@ -56,6 +71,7 @@ export const LoginScreen = () => {
                          <Text style={styles.dontHaveAccText}>Dont't have an Account? </Text>
                          {/* register button */}
                          <TouchableOpacity
+                              onPress={()=> Actions.signUpScreen()}
                               style={{ paddingHorizontal: 5, paddingVertical: 5 }}
                          >
                               <Text style={styles.registerText}> Register</Text>
@@ -100,3 +116,7 @@ const styles = StyleSheet.create({
      footerContainer : {flexDirection : 'row', bottom : dimensions.heightLevel2 , width: dimensions.fullWidth , justifyContent : 'center' , alignItems : 'center' },
 
 });
+
+
+
+export default LoginScreen

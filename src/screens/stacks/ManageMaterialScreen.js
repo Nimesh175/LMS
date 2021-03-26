@@ -9,6 +9,7 @@ import ListButton from '../../components/ListButton';
 import TopNavigationBar from '../../components/TopNavigationBar';
 import DropDownPicker from 'react-native-dropdown-picker';
 import FilePickerv2 from '../../components/NDFilePicker'
+import { Actions } from 'react-native-router-flux';
 
 const fileIcon = <Icon name="file-text" size={45} color={colors.primary}  />;
 const plusIcon = <Icon name="plus" size={30} color={colors.primary}  />;
@@ -20,7 +21,7 @@ const ManageMaterialScreen = () => {
      return (
           <>
                {/* send to stack router action > using onPress */}
-               <TopNavigationBar name={"Manage materials"} />
+               <TopNavigationBar name={"Manage materials"} action={() => Actions.homeScreen()} />
 
 
 

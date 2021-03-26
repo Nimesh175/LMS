@@ -142,7 +142,7 @@ const OnlineLessonScreen = () => {
 
 const styles = StyleSheet.create({
      mainContainer : { width : dimensions.fullWidth , paddingHorizontal : dimensions.paddingLevel3 , paddingVertical : dimensions.paddingLevel1 },
-     sheduleCardContainer : {width : "100%" , paddingVertical : dimensions.paddingLevel1,  height : dimensions.heightLevel10 * 2.75 , borderRadius : 5},
+     sheduleCardContainer : {width : "100%" , paddingVertical : dimensions.paddingLevel1,  height : dimensions.heightLevel10 * 2.4 , borderRadius : 5},
      _CardContainer : {width : "100%" , paddingVertical : dimensions.paddingLevel2, backgroundColor : colors.white, flexDirection :'row', borderRadius : 10 },
 
      cardImg1: { width: dimensions.heightLevel5, backgroundColor: 'rgba(166,166,166,0.5)', height:  dimensions.heightLevel5, borderRadius: 5 , transform : [{rotate : '15deg'}] },

@@ -6,8 +6,11 @@ import { colors, dimensions, fontFamilies, fontSizes } from '../configurations/c
 import EmptyView from './EmptyView'
 import TextField from './TextField';
 import ListButton from './/ListButton';
+import { Actions } from 'react-native-router-flux';
 
-const TopNavigationBar = ({name="" , action={}}) => {
+const TopNavigationBar = ({name="" , action=null}) => {
+ 
+
      return (
           <>
                <View style={styles.container}>

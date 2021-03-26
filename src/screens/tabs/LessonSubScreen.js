@@ -1,4 +1,5 @@
 import React , {useEffect , useState} from 'react';
+import {useDispatch , useSelector} from 'react-redux'
 import { View ,Text , StyleSheet, TouchableOpacity , KeyboardAvoidingView ,Image} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import { LayoutBackground } from '../../components/LayoutBackground';
@@ -14,18 +15,33 @@ const arrowUp = <Icon name="chevron-up" size={16} color={colors.primary} />;
 const correct = <Icon name="check-circle" size={16} color={colors.primary} />;
 const download = <Icon name="arrow-alt-circle-down" size={13} color={colors.red} />;
 
+import { showChapterAction } from '../../redux/actions/lessonSubActions'
 
 // list item
 const ListItems = ({id , lessonTitle , lessonText=""}) => {
-
+     const dispatch = useDispatch();
      const [isShow, setIsShow] = useState(false);
-     const [isUsed, setIsUsed] = useState(false);
 
-     useEffect(() => {
-          if(isShow == true){
-               setIsUsed(true)
-          }
-     }, [isShow])
+     const isUsedArr = useSelector(state => state.lessonSubState.seenChapterList)
+     console.log(isUsedArr , "<<<<<< DDDDDDDDDDDD")
+     // let isUsed = true;
+     //  [...isUsedArr].map((item)=> {
+     //           if(id === item) {
+     //                isUsed = true
+     //                return
+     //           }
+     //  })
+
+
+     // let seenLesson = !isUsed && isShow ;
+     // console.log(isUsed)
+     // if(seenLesson) {
+     //      console.log("AAA")
+     //      dispatch(showChapterAction(id))
+     // }
+    
+
+
 
      return (
           <View id={id}>
@@ -37,7 +53,7 @@ const ListItems = ({id , lessonTitle , lessonText=""}) => {
                          <Text style={styles.mainList__text}>{lessonTitle}</Text>
                     </View>
                     <View style={{width : "15%"}}>
-                    <Text>{ isUsed ? correct :  (isShow ? arrowUp: arrowDown )  }</Text>
+                    <Text>{ isShow ? correct : arrowDown  }</Text>
                     </View>
                </TouchableOpacity>  
 

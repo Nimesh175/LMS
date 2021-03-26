@@ -1,5 +1,7 @@
+import 'react-native-gesture-handler';
 
-import React from 'react';
+
+import React, {useEffect} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -10,61 +12,36 @@ import {
   View,
 } from 'react-native';
 
-import { colors, basicStyles } from './configurations/constants';
-import { LoginScreen } from './screens/stacks/LoginScreen';
-import { SignUpScreen } from './screens/stacks/SignUpScreen';
-import { ResetPasswordScreen } from './screens/stacks/ResetPasswordScreen';
-import { ForgotPasswordScreen } from './screens/stacks/ForgotPasswordScreen';
-import  HomeScreen  from './screens/tabs/HomeScreen';
-import ViewMarksScreen from './screens/tabs/ViewMarksScreen';
-import LessonScreen from './screens/tabs/LessonScreen';
-import PrivacyScreen from './screens/stacks/PrivacyScreen';
-import SupportScreen from './screens/stacks/SupportScreen';
-import SmartNotificationScreen from './screens/stacks/SmartNotificationScreen';
-import ProfileScreen from './screens/drawer/ProfileScreen';
-import SettingScreen from './screens/drawer/SettingScreen';
-import LessonSubScreen from './screens/tabs/LessonSubScreen';
-import OnlineLessonScreen from './screens/tabs/OnlineLessonScreen';
-import ManageMaterialScreen from './screens/stacks/ManageMaterialScreen';
-import NDFilePicker from './components/NDFilePicker';
+import SplashScreen from 'react-native-splash-screen';
 
+import { colors, basicStyles } from './configurations/constants';
+
+
+import {Provider} from 'react-redux';
+import {PersistGate} from 'redux-persist/integration/react';
+import { store, persistor } from "./redux/store/store";
+import StackNavigations from './navigations/StackNavigations';
+import TabNavigations from './navigations/TabNavigations';
 
 const App= () => {
+
+  useEffect(() => {
+    SplashScreen.hide();
+  }, [])
  
 
   return (
-     <View style={{flex: 1}}> 
-          <StatusBar backgroundColor={colors.primary} />
-            <SafeAreaView style={[basicStyles.miniFlexWrapper , {backgroundColor : '#F6F6F6'} ]}> 
-              
-
-                {/* <LoginScreen /> */}
-                {/* <SignUpScreen /> */}
-                {/* <ResetPasswordScreen /> */}
-                {/* <ForgotPasswordScreen /> */}
-                {/* <HomeScreen /> */}
-                {/* <ViewMarksScreen /> */}
-                {/* <LessonScreen /> */}
-
-                {/* <PrivacyScreen /> */}
-                {/* <SupportScreen /> */}
-                {/* <SmartNotificationScreen /> */}
-
-                {/* <ProfileScreen /> */}
-                {/* <SettingScreen /> */}
-
-                <LessonSubScreen />
-                {/* <OnlineLessonScreen /> */}
-
-                {/* <ManageMaterialScreen /> */}
-
-                {/* <NDFilePicker /> */}
-                
-      
-
+    <>
+      <Provider store={store}>
+          <PersistGate loading={null} persistor={persistor}>
+            <StatusBar backgroundColor={colors.primary} />
+            <SafeAreaView style={[basicStyles.miniFlexWrapper , {backgroundColor : '#F6F6F6'} ]}>
+                {/* <StackNavigations /> */}
+                <TabNavigations />
             </SafeAreaView>
-        </View>
-
+          </PersistGate>
+        </Provider>
+    </>
   );
 };
 
