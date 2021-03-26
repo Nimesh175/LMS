@@ -22,6 +22,7 @@ import {PersistGate} from 'redux-persist/integration/react';
 import { store, persistor } from "./redux/store/store";
 import StackNavigations from './navigations/StackNavigations';
 import TabNavigations from './navigations/TabNavigations';
+// import DrawerNavigator from './navigations/DrawerNavigator';
 
 const App= () => {
 
@@ -36,8 +37,9 @@ const App= () => {
           <PersistGate loading={null} persistor={persistor}>
             <StatusBar backgroundColor={colors.primary} />
             <SafeAreaView style={[basicStyles.miniFlexWrapper , {backgroundColor : '#F6F6F6'} ]}>
-                {/* <StackNavigations /> */}
-                <TabNavigations />
+                <StackNavigations />
+                {/* <TabNavigations /> */}
+                {/* <DrawerNavigator /> */}
             </SafeAreaView>
           </PersistGate>
         </Provider>

@@ -152,14 +152,14 @@ const OldClassCard = ({id=0  }) => {
 
                     {/* last manage material */}
                     <EmptyView style={{ marginTop: dimensions.heightLevel2 }} />
-                    <TouchableOpacity style={styles.manageMaterialContainer}>
+                    <TouchableOpacity style={styles.manageMaterialContainer}   onPress={ () => Actions.manageMaterialScreen() } >
                          {/* image */}
                          <View style={{padding : dimensions.heightLevel1 , backgroundColor : colors.white , borderRadius : 15}}>
                                <Image source={upload1} style={{width : 25 , height : 25}} />
                          </View>
 
                         <TouchableOpacity
-                              onPress={ () => Actions.manageMaterialScreen() }
+                             
                               style={{justifyContent : 'center' , paddingLeft : dimensions.paddingLevel1}}>
                          <Text style={{fontFamily : fontFamilies.PoppinsRegular , fontSize : fontSizes.fontMidMedium}}>Manage materials</Text>
                         </TouchableOpacity>
