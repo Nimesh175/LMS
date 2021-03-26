@@ -11,6 +11,7 @@ import { ScrollView } from 'react-native';
 
 const arrowDown = <Icon name="chevron-down" size={16} color={colors.primary} />;
 const arrowUp = <Icon name="chevron-up" size={16} color={colors.primary} />;
+const correct = <Icon name="check-circle" size={16} color={colors.primary} />;
 const download = <Icon name="arrow-alt-circle-down" size={13} color={colors.red} />;
 
 
@@ -18,6 +19,13 @@ const download = <Icon name="arrow-alt-circle-down" size={13} color={colors.red}
 const ListItems = ({id , lessonTitle , lessonText=""}) => {
 
      const [isShow, setIsShow] = useState(false);
+     const [isUsed, setIsUsed] = useState(false);
+
+     useEffect(() => {
+          if(isShow == true){
+               setIsUsed(true)
+          }
+     }, [isShow])
 
      return (
           <View id={id}>
@@ -29,7 +37,7 @@ const ListItems = ({id , lessonTitle , lessonText=""}) => {
                          <Text style={styles.mainList__text}>{lessonTitle}</Text>
                     </View>
                     <View style={{width : "15%"}}>
-                    <Text>{isShow ? arrowUp: arrowDown}</Text>
+                    <Text>{ isUsed ? correct :  (isShow ? arrowUp: arrowDown )  }</Text>
                     </View>
                </TouchableOpacity>  
 

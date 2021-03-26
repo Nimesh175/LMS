@@ -14,9 +14,15 @@ const rightArrow = <Icon name="chevron-right" size={30} color="#7F7F7F" />;
 
 
 const DateCard = ({id  }) => {
+
+     
+
+
+
+
      return(
-          <View id={id}  style={{marginRight : 5}}>
-               <View style={{paddingHorizontal : dimensions.paddingLevel2, paddingVertical : dimensions.paddingLevel1, backgroundColor : "rgba(255,255,255,0.2)", borderRadius : 10, justifyContent : 'center', alignItems :'center'}}>
+          <View id={id}  style={{marginRight : 8}}>
+               <View style={{paddingHorizontal : dimensions.paddingLevel2 * 1.7, paddingVertical : dimensions.paddingLevel1, backgroundColor : "rgba(255,255,255,0.4)", borderRadius : 10, justifyContent : 'center', alignItems :'center'}}>
                     <Text style={{fontFamily : fontFamilies.PoppinsRegular, fontSize : fontSizes.fontMidMedium }}>Thu</Text>
                     <Text style={{fontFamily : fontFamilies.PoppinsSemiBold, fontSize : fontSizes.fontXLarge }}>10</Text>
                </View>

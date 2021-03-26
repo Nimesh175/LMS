@@ -25,6 +25,8 @@ import ProfileScreen from './screens/drawer/ProfileScreen';
 import SettingScreen from './screens/drawer/SettingScreen';
 import LessonSubScreen from './screens/tabs/LessonSubScreen';
 import OnlineLessonScreen from './screens/tabs/OnlineLessonScreen';
+import ManageMaterialScreen from './screens/stacks/ManageMaterialScreen';
+import NDFilePicker from './components/NDFilePicker';
 
 
 const App= () => {
@@ -51,8 +53,12 @@ const App= () => {
                 {/* <ProfileScreen /> */}
                 {/* <SettingScreen /> */}
 
-                {/* <LessonSubScreen /> */}
-                <OnlineLessonScreen />
+                <LessonSubScreen />
+                {/* <OnlineLessonScreen /> */}
+
+                {/* <ManageMaterialScreen /> */}
+
+                {/* <NDFilePicker /> */}
                 
       
 
